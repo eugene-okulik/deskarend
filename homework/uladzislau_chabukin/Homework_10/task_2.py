@@ -1,5 +1,6 @@
 def decorator_1(func):
     def wrapper(text, count, *args, **kwargs):
+        res = None
         for _ in range(count):
             res = func(text, *args, **kwargs)
         return res
@@ -10,6 +11,7 @@ def decorator_1(func):
 def decorator_2(count):
     def func_decorator(func):
         def wrapper(text, *args, **kwargs):
+            res = None
             for _ in range(count):
                 res = func(text, *args, **kwargs)
             return res
