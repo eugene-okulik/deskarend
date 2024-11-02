@@ -1,0 +1,95 @@
+Inserting tables
+
+1.
+INSERT INTO students (name, second_name, group_id)
+VALUES ('Uladzislau', 'Chabukin', 202);
+
+2.
+INSERT INTO books (title , taken_by_student_id)
+VALUES ('1984', 3569);
+
+INSERT INTO books (title , taken_by_student_id)
+VALUES ('Скотный двор', 3569);
+
+INSERT INTO books (title , taken_by_student_id)
+VALUES ('Антиутопия', 3569);
+
+3.
+INSERT INTO `groups` (title , start_date, end_date)
+VALUES ('AutoQa', '01-11-2024','01-12-2024');
+
+UPDATE students
+SET group_id  = 2247
+WHERE second_name = 'Chabukin';
+
+4.
+INSERT INTO subjets (title)
+VALUES ('Chem');
+
+INSERT INTO subjets (title)
+VALUES ('Phys');
+
+INSERT INTO subjets (title)
+VALUES ('Math');
+
+5.
+INSERT INTO lessons (title, subject_id)
+VALUES ('ls_1', 3393);
+INSERT INTO lessons (title, subject_id)
+VALUES ('ls_2', 3393);
+
+INSERT INTO lessons (title, subject_id)
+VALUES ('ls_1', 3394);
+INSERT INTO lessons (title, subject_id)
+VALUES ('ls_2', 3394);
+
+INSERT INTO lessons (title, subject_id)
+VALUES ('ls_1', 3395);
+INSERT INTO lessons (title, subject_id)
+VALUES ('ls_2', 3395);
+
+6.
+INSERT INTO marks (value , lesson_id, student_id)
+VALUES ('Great', 6825, 3569);
+INSERT INTO marks (value , lesson_id, student_id)
+VALUES ('Good', 6826, 3569);
+
+INSERT INTO marks (value , lesson_id, student_id)
+VALUES ('Good', 6827, 3569);
+INSERT INTO marks (value , lesson_id, student_id)
+VALUES ('Bad', 6828, 3569);
+
+INSERT INTO marks (value , lesson_id, student_id)
+VALUES ('Not bad', 6829, 3569);
+INSERT INTO marks (value , lesson_id, student_id)
+VALUES ('So So', 6830, 3569);
+
+
+Getting information
+
+1.
+SELECT *
+FROM marks
+WHERE student_id = 3569;
+
+2.
+SELECT *
+FROM books
+WHERE taken_by_student_id = 3569;
+
+3.
+SELECT s.name,
+       s.second_name,
+	   g.title,
+	   b.title,
+	   m.value,
+	   l.title,
+	   s2.title
+FROM students s
+JOIN `groups` g ON s.group_id = g.id
+JOIN books b ON s.id = b.taken_by_student_id
+JOIN marks m ON s.id = m.student_id
+JOIN lessons l ON m.lesson_id =l.id
+JOIN subjets s2 ON l.subject_id = s2.id
+WHERE s.id = 3569;
+
