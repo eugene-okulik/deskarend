@@ -108,11 +108,11 @@ print(student_books)
 get_student_info = '''
 SELECT s.name,
        s.second_name,
-	   g.title,
-	   b.title,
-	   m.value,
-	   l.title,
-	   s2.title
+       g.title,
+       b.title,
+       m.value,
+       l.title,
+       s2.title
 FROM students s
 JOIN `groups` g ON s.group_id = g.id
 JOIN books b ON s.id = b.taken_by_student_id
