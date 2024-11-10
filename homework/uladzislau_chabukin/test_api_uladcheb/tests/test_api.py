@@ -1,7 +1,7 @@
 import pytest
 import allure
 
-from data import Objects
+from test_api_uladcheb.data import Objects
 
 
 @pytest.mark.critical

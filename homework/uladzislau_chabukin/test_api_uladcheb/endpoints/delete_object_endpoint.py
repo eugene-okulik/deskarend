@@ -1,5 +1,6 @@
 import requests
-from endpoints.base_endpoint import BaseEndpoint
+
+from test_api_uladcheb.endpoints.base_endpoint import BaseEndpoint
 
 
 class DeleteObjectEndpoint(BaseEndpoint):
