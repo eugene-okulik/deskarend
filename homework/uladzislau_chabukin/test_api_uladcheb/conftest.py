@@ -3,10 +3,10 @@ import random
 import pytest
 from faker import Faker
 
-from endpoints.create_object_endpoint import CreateObject
-from endpoints.edit_object_with_put_endpoint import EditObjectWithPut
-from endpoints.delete_object_endpoint import DeleteObjectEndpoint
-from endpoints.edit_object_with_patch_endpoint import EditObjectWithPatch
+from test_api_uladcheb.endpoints.create_object_endpoint import CreateObject
+from test_api_uladcheb.endpoints.edit_object_with_put_endpoint import EditObjectWithPut
+from test_api_uladcheb.endpoints.delete_object_endpoint import DeleteObjectEndpoint
+from test_api_uladcheb.endpoints.edit_object_with_patch_endpoint import EditObjectWithPatch
 
 fake = Faker()
 
