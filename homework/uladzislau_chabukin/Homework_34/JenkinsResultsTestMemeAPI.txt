@@ -1,0 +1,459 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/meme_api_project
+[meme_api_project] $ /bin/sh -xe /tmp/jenkins4945505363479970735.sh
++ cd MEME_API
++ git pull
+Already up to date.
++ pip3 install -r requirements.txt --break-system-packages
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: allure-pytest==2.13.5 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (2.13.5)
+Requirement already satisfied: allure-python-commons==2.13.5 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (2.13.5)
+Requirement already satisfied: attrs==24.2.0 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 3)) (24.2.0)
+Requirement already satisfied: certifi==2024.8.30 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (2024.8.30)
+Requirement already satisfied: charset-normalizer==3.4.0 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (3.4.0)
+Requirement already satisfied: colorama==0.4.6 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.4.6)
+Requirement already satisfied: Faker==30.8.2 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 7)) (30.8.2)
+Requirement already satisfied: idna==3.10 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 8)) (3.10)
+Requirement already satisfied: iniconfig==2.0.0 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 9)) (2.0.0)
+Requirement already satisfied: packaging==24.2 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 10)) (24.2)
+Requirement already satisfied: pluggy==1.5.0 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 11)) (1.5.0)
+Requirement already satisfied: pytest==8.3.3 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 12)) (8.3.3)
+Requirement already satisfied: python-dateutil==2.9.0.post0 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 13)) (2.9.0.post0)
+Requirement already satisfied: requests==2.32.3 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 14)) (2.32.3)
+Requirement already satisfied: six==1.16.0 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 15)) (1.16.0)
+Requirement already satisfied: typing_extensions==4.12.2 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 16)) (4.12.2)
+Requirement already satisfied: urllib3==2.2.3 in /var/jenkins_home/.local/lib/python3.11/site-packages (from -r requirements.txt (line 17)) (2.2.3)
++ python3 -m pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.3, pluggy-1.5.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/meme_api_project/MEME_API
+plugins: allure-pytest-2.13.5, Faker-30.8.2
+collecting ... collected 134 items
+
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme PASSED  [  0%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_token PASSED [  1%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_token PASSED [  2%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_required_field[payload0] PASSED [  2%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_required_field[payload1] PASSED [  3%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_required_field[payload2] PASSED [  4%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_required_field[payload3] PASSED [  5%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_payload PASSED [  5%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_payload FAILED [  6%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_text_field[payload0] PASSED [  7%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_text_field[payload1] FAILED [  8%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_text_field[payload2] PASSED [  8%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_text_field[payload3] PASSED [  9%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_url_field[payload0] PASSED [ 10%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_url_field[payload1] FAILED [ 11%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_url_field[payload2] PASSED [ 11%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_url_field[payload3] PASSED [ 12%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_tags_field[payload0] PASSED [ 13%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_tags_field[payload1] PASSED [ 14%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_tags_field[payload2] FAILED [ 14%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_tags_field[payload3] PASSED [ 15%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_info_field[payload0] PASSED [ 16%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_info_field[payload1] PASSED [ 17%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_info_field[payload2] PASSED [ 17%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_info_field[payload3] FAILED [ 18%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_text_field[payload0] PASSED [ 19%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_text_field[payload1] PASSED [ 20%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_text_field[payload2] PASSED [ 20%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_text_field[payload3] PASSED [ 21%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_text_field[payload4] PASSED [ 22%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_url_field[payload0] PASSED [ 23%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_url_field[payload1] PASSED [ 23%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_url_field[payload2] PASSED [ 24%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_url_field[payload3] PASSED [ 25%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_url_field[payload4] PASSED [ 26%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_tags_field[payload0] PASSED [ 26%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_tags_field[payload1] PASSED [ 27%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_tags_field[payload2] PASSED [ 28%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_tags_field[payload3] PASSED [ 29%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_tags_field[payload4] PASSED [ 29%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_info_field[payload0] PASSED [ 30%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_info_field[payload1] PASSED [ 31%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_info_field[payload2] PASSED [ 32%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_info_field[payload3] PASSED [ 32%]
+tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_incorrect_info_field[payload4] PASSED [ 33%]
+tests/test_authorize.py::TestAuthorize::test_successful_authorize PASSED [ 34%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_incorrect_payload[payload0] PASSED [ 35%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_incorrect_payload[payload1] PASSED [ 35%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_incorrect_payload[payload2] PASSED [ 36%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_incorrect_payload[payload3] PASSED [ 37%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_incorrect_payload[payload4] PASSED [ 38%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_empty_name[payload0] PASSED [ 38%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_empty_name[payload1] FAILED [ 39%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_empty_name[payload2] PASSED [ 40%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_empty_name[payload3] PASSED [ 41%]
+tests/test_authorize.py::TestAuthorize::test_authorize_with_empty_payload PASSED [ 41%]
+tests/test_authorize.py::TestAuthorize::test_authorize_without_payload FAILED [ 42%]
+tests/test_check_token.py::TestCheckToken::test_successful_check_token_with_alive_token PASSED [ 43%]
+tests/test_check_token.py::TestCheckToken::test_successful_check_token_with_not_existing_token PASSED [ 44%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_meme PASSED       [ 44%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_meme_without_authorization PASSED [ 45%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_meme_with_incorrect_authorization PASSED [ 46%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_not_existing_meme[618637713] PASSED [ 47%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_not_existing_meme[NotExistingId] PASSED [ 47%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_meme_without_meme_owner PASSED [ 48%]
+tests/test_delete_meme.py::TestDeleteMeme::test_delete_the_same_meme_twice PASSED [ 49%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme PASSED     [ 50%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_authorization PASSED [ 50%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_authorization PASSED [ 51%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_required_field[payloads_without_id] PASSED [ 52%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_required_field[payloads_without_text] PASSED [ 52%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_required_field[payloads_without_url] PASSED [ 53%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_required_field[payloads_without_tags] PASSED [ 54%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_required_field[payloads_without_info] PASSED [ 55%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_payload PASSED [ 55%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_payload FAILED [ 56%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_id_field[payload0] PASSED [ 57%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_id_field[payload1] PASSED [ 58%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_id_field[payload2] PASSED [ 58%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_id_field[payload3] PASSED [ 59%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_text_field[payload0] PASSED [ 60%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_text_field[payload1] PASSED [ 61%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_text_field[payload2] PASSED [ 61%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_text_field[payload3] PASSED [ 62%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_url_field[payload0] PASSED [ 63%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_url_field[payload1] PASSED [ 64%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_url_field[payload2] PASSED [ 64%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_url_field[payload3] PASSED [ 65%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_tags_field[payload0] PASSED [ 66%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_tags_field[payload1] PASSED [ 67%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_tags_field[payload2] PASSED [ 67%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_tags_field[payload3] PASSED [ 68%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_info_field[payload0] PASSED [ 69%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_info_field[payload1] PASSED [ 70%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_info_field[payload2] PASSED [ 70%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_info_field[payload3] FAILED [ 71%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_id_field[payload0] PASSED [ 72%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_id_field[payload1] PASSED [ 73%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_id_field[payload2] PASSED [ 73%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_id_field[payload3] PASSED [ 74%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_id_field[payload4] PASSED [ 75%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_text_field[payload0] PASSED [ 76%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_text_field[payload1] PASSED [ 76%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_text_field[payload2] PASSED [ 77%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_text_field[payload3] PASSED [ 78%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_text_field[payload4] PASSED [ 79%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_url_field[payload0] PASSED [ 79%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_url_field[payload1] PASSED [ 80%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_url_field[payload2] PASSED [ 81%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_url_field[payload3] PASSED [ 82%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_url_field[payload4] PASSED [ 82%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_tags_field[payload0] PASSED [ 83%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_tags_field[payload1] PASSED [ 84%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_tags_field[payload2] PASSED [ 85%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_tags_field[payload3] PASSED [ 85%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_tags_field[payload4] PASSED [ 86%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_info_field[payload0] PASSED [ 87%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_info_field[payload1] PASSED [ 88%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_info_field[payload2] PASSED [ 88%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_info_field[payload3] PASSED [ 89%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_incorrect_info_field[payload4] PASSED [ 90%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_new_id_in_query PASSED [ 91%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_new_id_in_body PASSED [ 91%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_not_existing_id[618637713] PASSED [ 92%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_not_existing_id[NotExistingId] PASSED [ 93%]
+tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_meme_owner PASSED [ 94%]
+tests/test_get_a_meme.py::TestGetMeme::test_get_a_meme PASSED            [ 94%]
+tests/test_get_a_meme.py::TestGetMeme::test_get_a_meme_without_token PASSED [ 95%]
+tests/test_get_a_meme.py::TestGetMeme::test_get_a_not_existing_meme[618637713] PASSED [ 96%]
+tests/test_get_a_meme.py::TestGetMeme::test_get_a_not_existing_meme[NotExistingId] PASSED [ 97%]
+tests/test_get_a_meme.py::TestGetMeme::test_get_a_meme_with_incorrect_token PASSED [ 97%]
+tests/test_get_all_memes.py::TestGetAllMemes::test_get_all_memes PASSED  [ 98%]
+tests/test_get_all_memes.py::TestGetAllMemes::test_get_all_memes_without_token PASSED [ 99%]
+tests/test_get_all_memes.py::TestGetAllMemes::test_get_all_memes_with_incorrect_token PASSED [100%]
+
+=================================== FAILURES ===================================
+______________ TestAddNewMem.test_add_a_new_meme_without_payload _______________
+
+self = <test_add_a_new_meme.TestAddNewMem object at 0x7fabb14afd90>
+add_a_new_meme_endpoint = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb1156690>
+authorize_token = 'bIIgIP2XudqZhgk'
+
+    @allure.tag('POSTs')
+    @allure.story('Add a mem')
+    @allure.title('Check adding meme without payload')
+    def test_add_a_new_meme_without_payload(self, add_a_new_meme_endpoint, authorize_token):
+        add_a_new_meme_endpoint.add_a_new_mem(payload=None, token=authorize_token)
+    
+>       add_a_new_meme_endpoint.check_status_code_is_400()
+
+tests/test_add_a_new_meme.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb1156690>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 500
+
+endpoints/base_endpoint.py:10: AssertionError
+______ TestAddNewMem.test_add_a_new_meme_with_empty_text_field[payload1] _______
+
+self = <test_add_a_new_meme.TestAddNewMem object at 0x7fabb14bc450>
+add_a_new_meme_endpoint = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb115f090>
+payload = {'info': {'colors': ['#e55778', '#d3460a', '#a1d9f4'], 'objects': ['Japan', 'Bahamas', 'Belgium']}, 'tags': ['smile', 'logins', 'bird', 'bird'], 'text': '', 'url': 'https://matthews-rice.com/'}
+authorize_token = 'ifxKlDvFrpNZLQB'
+
+    @allure.tag('POSTs')
+    @allure.story('Add a mem')
+    @allure.title('Check adding meme with empty text field')
+    @pytest.mark.parametrize('payload', MemePayload().payloads_with_empty_text)
+    def test_add_a_new_meme_with_empty_text_field(self, add_a_new_meme_endpoint, payload, authorize_token):
+        add_a_new_meme_endpoint.add_a_new_mem(payload, authorize_token)
+    
+>       add_a_new_meme_endpoint.check_status_code_is_400()
+
+tests/test_add_a_new_meme.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb115f090>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 200
+
+endpoints/base_endpoint.py:10: AssertionError
+_______ TestAddNewMem.test_add_a_new_meme_with_empty_url_field[payload1] _______
+
+self = <test_add_a_new_meme.TestAddNewMem object at 0x7fabb14bcb50>
+add_a_new_meme_endpoint = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb1172790>
+payload = {'info': {'colors': ['#759fd6', '#b5221c', '#bc075f'], 'objects': ['Netherlands Antilles']}, 'tags': ['password', 'duc...ta issue activity listen another. Leg develop until major.\nDecide figure song. East night attention stop.', 'url': ''}
+authorize_token = 'zmb3gYaqJc1hwzc'
+
+    @allure.tag('POSTs')
+    @allure.story('Add a mem')
+    @allure.title('Check adding meme with empty url field')
+    @pytest.mark.parametrize('payload', MemePayload().payloads_with_empty_url)
+    def test_add_a_new_meme_with_empty_url_field(self, add_a_new_meme_endpoint, payload, authorize_token):
+        add_a_new_meme_endpoint.add_a_new_mem(payload, authorize_token)
+    
+>       add_a_new_meme_endpoint.check_status_code_is_400()
+
+tests/test_add_a_new_meme.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb1172790>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 200
+
+endpoints/base_endpoint.py:10: AssertionError
+______ TestAddNewMem.test_add_a_new_meme_with_empty_tags_field[payload2] _______
+
+self = <test_add_a_new_meme.TestAddNewMem object at 0x7fabb14bfa90>
+add_a_new_meme_endpoint = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb108cf90>
+payload = {'info': {'colors': ['#ff9ee8'], 'objects': ['Anguilla', 'Iran', 'Central African Republic']}, 'tags': [], 'text': 'Pa...e actually above board heart.\nTravel up heart always. Parent doctor his security.', 'url': 'http://www.gonzalez.com/'}
+authorize_token = 'ZnRladpKy8Yr4vq'
+
+    @allure.tag('POSTs')
+    @allure.story('Add a mem')
+    @allure.title('Check adding meme with empty tags field')
+    @pytest.mark.parametrize('payload', MemePayload().payloads_with_empty_tags)
+    def test_add_a_new_meme_with_empty_tags_field(self, add_a_new_meme_endpoint, payload, authorize_token):
+        add_a_new_meme_endpoint.add_a_new_mem(payload, authorize_token)
+    
+>       add_a_new_meme_endpoint.check_status_code_is_400()
+
+tests/test_add_a_new_meme.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb108cf90>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 200
+
+endpoints/base_endpoint.py:10: AssertionError
+______ TestAddNewMem.test_add_a_new_meme_with_empty_info_field[payload3] _______
+
+self = <test_add_a_new_meme.TestAddNewMem object at 0x7fabb14c16d0>
+add_a_new_meme_endpoint = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb1498110>
+payload = {'info': {}, 'tags': ['password', 'duck', 'duck', 'laugh', 'password', 'duck', ...], 'text': 'Trade fact some gas tota...n level example fight.\nSpeech us western measure. Land result weight manager those next.', 'url': 'http://lopez.biz/'}
+authorize_token = '2VUOF1LOkveEO1T'
+
+    @allure.tag('POSTs')
+    @allure.story('Add a mem')
+    @allure.title('Check adding meme with empty info field')
+    @pytest.mark.parametrize('payload', MemePayload().payloads_with_empty_info)
+    def test_add_a_new_meme_with_empty_info_field(self, add_a_new_meme_endpoint, payload, authorize_token):
+        add_a_new_meme_endpoint.add_a_new_mem(payload, authorize_token)
+    
+>       add_a_new_meme_endpoint.check_status_code_is_400()
+
+tests/test_add_a_new_meme.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.add_a_new_meme.AddNewMemEndpoint object at 0x7fabb1498110>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 200
+
+endpoints/base_endpoint.py:10: AssertionError
+____________ TestAuthorize.test_authorize_with_empty_name[payload1] ____________
+
+self = <test_authorize.TestAuthorize object at 0x7fabb14e5910>
+authorize_endpoint = <endpoints.authorize_endpoint.AuthorizeEndpointEndpoint object at 0x7fabb1493790>
+payload = {'name': ''}
+
+    @allure.tag('POSTs')
+    @allure.story('Authorize')
+    @allure.title('Check authorize with empty name')
+    @pytest.mark.parametrize('payload', IncorrectAuthorizationPayload.payload_with_empty_name)
+    def test_authorize_with_empty_name(self, authorize_endpoint, payload):
+        authorize_endpoint.authorize(payload)
+    
+>       authorize_endpoint.check_status_code_is_400()
+
+tests/test_authorize.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.authorize_endpoint.AuthorizeEndpointEndpoint object at 0x7fabb1493790>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 200
+
+endpoints/base_endpoint.py:10: AssertionError
+_________________ TestAuthorize.test_authorize_without_payload _________________
+
+self = <test_authorize.TestAuthorize object at 0x7fabb14e6cd0>
+authorize_endpoint = <endpoints.authorize_endpoint.AuthorizeEndpointEndpoint object at 0x7fabb11941d0>
+
+    @allure.tag('POSTs')
+    @allure.story('Authorize')
+    @allure.title('Check authorize without meme_payload')
+    def test_authorize_without_payload(self, authorize_endpoint):
+        authorize_endpoint.authorize()
+    
+>       authorize_endpoint.check_status_code_is_400()
+
+tests/test_authorize.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.authorize_endpoint.AuthorizeEndpointEndpoint object at 0x7fabb11941d0>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 500
+
+endpoints/base_endpoint.py:10: AssertionError
+_______________ TestEditMeme.test_edit_the_meme_without_payload ________________
+
+self = <test_edit_the_meme.TestEditMeme object at 0x7fabb1140d90>
+edit_meme_endpoint = <endpoints.edit_meme_endpoint.EditMemeEndpoint object at 0x7fabb150a7d0>
+authorize_token = 'q6z90sqQJjLm5Nm', new_meme_id = 7
+
+    @allure.tag('PUTs')
+    @allure.story('Edit the mem')
+    @allure.title('Check editing meme without payload')
+    def test_edit_the_meme_without_payload(self, edit_meme_endpoint, authorize_token, new_meme_id):
+        edit_meme_endpoint.edit_meme(token=authorize_token, meme_id=new_meme_id, payload=None)
+    
+>       edit_meme_endpoint.check_status_code_is_400()
+
+tests/test_edit_the_meme.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.edit_meme_endpoint.EditMemeEndpoint object at 0x7fabb150a7d0>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 500
+
+endpoints/base_endpoint.py:10: AssertionError
+_______ TestEditMeme.test_edit_the_meme_with_empty_info_field[payload3] ________
+
+self = <test_edit_the_meme.TestEditMeme object at 0x7fabb14f5fd0>
+edit_meme_endpoint = <endpoints.edit_meme_endpoint.EditMemeEndpoint object at 0x7fabb14f6b90>
+authorize_token = 'DeRG04LKPsYbAS5', new_meme_id = 7
+payload_for_edit_meme = {'id': 7, 'info': {}, 'tags': ['fun', 'image', 'yoga', 'duck', 'bird', 'shrek', ...], 'text': 'Material purpose genera...ence. Although conference father TV.\nMeasure I catch and left. Up authority it increase they receive left trip.', ...}
+payload = {'id': 1, 'info': {}, 'tags': ['duck', 'logins', 'bird', 'yoga', 'image', 'image'], 'text': 'Food try themselves somebody. It simple among player serve.\nRich full strong personal treatment. Security another range beyond model he.', ...}
+
+    @allure.tag('PUTs')
+    @allure.story('Edit the mem')
+    @allure.title('Check editing meme with empty info field')
+    @pytest.mark.parametrize('payload', EditMemePayload().payloads_with_empty_info)
+    def test_edit_the_meme_with_empty_info_field(
+            self, edit_meme_endpoint, authorize_token, new_meme_id, payload_for_edit_meme, payload
+    ):
+        payload_for_edit_meme['info'] = payload['info']
+    
+        edit_meme_endpoint.edit_meme(authorize_token, new_meme_id, payload_for_edit_meme)
+    
+>       edit_meme_endpoint.check_status_code_is_400()
+
+tests/test_edit_the_meme.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+endpoints/base_endpoint.py:19: in check_status_code_is_400
+    self._check_status_code(400)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <endpoints.edit_meme_endpoint.EditMemeEndpoint object at 0x7fabb14f6b90>
+status_code = 400
+
+    def _check_status_code(self, status_code):
+>       assert self.response.status_code == status_code, (f'Expected status code is {status_code}, '
+                                                          f'Actual is {self.response.status_code}')
+E       AssertionError: Expected status code is 400, Actual is 200
+
+endpoints/base_endpoint.py:10: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_without_payload - AssertionError: Expected status code is 400, Actual is 500
+FAILED tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_text_field[payload1] - AssertionError: Expected status code is 400, Actual is 200
+FAILED tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_url_field[payload1] - AssertionError: Expected status code is 400, Actual is 200
+FAILED tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_tags_field[payload2] - AssertionError: Expected status code is 400, Actual is 200
+FAILED tests/test_add_a_new_meme.py::TestAddNewMem::test_add_a_new_meme_with_empty_info_field[payload3] - AssertionError: Expected status code is 400, Actual is 200
+FAILED tests/test_authorize.py::TestAuthorize::test_authorize_with_empty_name[payload1] - AssertionError: Expected status code is 400, Actual is 200
+FAILED tests/test_authorize.py::TestAuthorize::test_authorize_without_payload - AssertionError: Expected status code is 400, Actual is 500
+FAILED tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_without_payload - AssertionError: Expected status code is 400, Actual is 500
+FAILED tests/test_edit_the_meme.py::TestEditMeme::test_edit_the_meme_with_empty_info_field[payload3] - AssertionError: Expected status code is 400, Actual is 200
+======================== 9 failed, 125 passed in 36.05s ========================
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
